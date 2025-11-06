@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/YOUR_GITHUB_USER/YOUR_CURRENCY_CONVERTER_REPO.git', branch: 'main'
+                git url: 'https://github.com/Patel-Phaneendra/currency-hackathon.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t currency-converter:python-flask-docs .'
+                    sh 'docker build -t currency-converter:python-currency-docs .'
                 }
             }
         }
