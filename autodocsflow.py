@@ -10,6 +10,7 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 # --- Code Parsing Functions ---
 def parse_python_code(src_dir):
     """Parse Python files for functions, classes, and Flask routes."""
+    print("DEBUG: Docs parsed from source directory:")
     docs = []
     for fname in os.listdir(src_dir):
         if fname.endswith('.py'):
