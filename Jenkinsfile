@@ -20,7 +20,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    sh 'docker run --rm -v $PWD:/app -e ALPHAVANTAGE_API_KEY=${ALPHAVANTAGE_API_KEY} currency-converter:python-flask-docs'
+                    sh 'docker run --rm -v $PWD:/app -e ALPHAVANTAGE_API_KEY=${ALPHAVANTAGE_API_KEY} currency-converter:python-currency-docs'
                 }
             }
         }
