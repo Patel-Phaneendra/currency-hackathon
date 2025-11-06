@@ -2,6 +2,9 @@
 This repo contains the code that is used for a POC of automating the process of documentations 
 
 
+
+
+
 # api_docs.html
 “As part of our CI workflow, after every build, Jenkins auto-generates a clear HTML documentation file for our APIs.”
 
@@ -16,7 +19,10 @@ This repo contains the code that is used for a POC of automating the process of 
 
 
 
-#**api_docs.text**
+
+
+
+# **api_docs.text**
 Plain English overview of your backend code, auto-generated after each build.
 
 Covers:
