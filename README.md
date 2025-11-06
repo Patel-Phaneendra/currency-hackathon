@@ -3,6 +3,31 @@ This repo contains the code that is used for a POC of automating the process of 
 
 
 
+# Jenkins Job workflow
+
+**Flow Explanation:**
+
+> Developer pushes new code to GitHub repo.
+
+> Jenkins job is automatically triggered.
+
+> Jenkins Pipeline:
+
+> Checkout code
+
+> Build Docker image
+
+> Run tests & code
+
+> Generate documentation (api_docs.html & api_docs.txt)
+
+> Publish docs files in confluence 
+
+
+
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/6af0f9be-ad82-4308-868c-6ee431740688" />
+
+
 
 
 # api_docs.html
