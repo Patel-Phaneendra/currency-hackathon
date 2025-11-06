@@ -1,1 +1,15 @@
+Currency Converter Python Code - Documentation
+=============================================
 
+Name: convert_currency
+Location: currency.py
+API Endpoint: /
+Type: flask_route
+Functionality Highlight:
+  This function/module integrates a third-party API (Alpha Vantage) to fetch live currency rates for conversion.
+Error Handling Highlight:
+  This module uses try/except blocks to catch and gracefully handle errors, e.g., invalid inputs, API failures.
+Use Cases:
+  - Converts user input currency amounts using live exchange rates.
+  - Handles numeric validation and API integration.
+----------------------------------------
