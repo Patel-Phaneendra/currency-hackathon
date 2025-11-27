@@ -13,15 +13,15 @@ This repo contains the code that is used for a POC of automating the process of 
 
 > Jenkins Pipeline:
 
-> Checkout code
+    > Checkout code
 
-> Build Docker image
+    > Build Docker image
 
-> Run tests & code
+    > Run tests & code
 
-> Generate documentation (api_docs.html & api_docs.txt)
+    > Generate documentation (api_docs.html & api_docs.txt)
 
-> Publish docs files in confluence 
+    > Publish docs files in confluence 
 
 
 
