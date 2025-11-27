@@ -4,7 +4,7 @@ import requests
 import logging
 from jinja2 import Environment, FileSystemLoader
 
-# Set up logging
+## Set up logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 # --- Code Parsing Functions ---
