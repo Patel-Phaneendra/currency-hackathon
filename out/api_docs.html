@@ -1,0 +1,32 @@
+
+  <h2>convert_currency</h2>
+  <p><strong>Type:</strong> flask_route</p>
+  <p><strong>API Endpoint:</strong> /</p>
+  
+  <pre>def convert_currency():
+    if request.method == &#39;POST&#39;:
+        amount = request.form.get(&#39;amount&#39;)
+        from_currency = request.form.get(&#39;from_currency&#39;).upper()
+        to_currency = request.form.get(&#39;to_currency&#39;).upper()
+
+        # Validate numeric amount
+        try:
+            amount = float(amount)
+        except ValueError:
+            return render_template_string(HTML_FORM, error=&#34;Please enter a valid numeric amount.&#34;)
+
+        # Call Alpha Vantage API for exchange rate
+        url = (f&#39;https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&#39;
+               f&#39;&amp;from_currency={from_currency}&amp;to_currency={to_currency}&amp;apikey={API_KEY}&#39;)
+
+        try:
+            response = requests.get(url)
+            data = response.json()
+            rate = float(data[&#39;Realtime Currency Exchange Rate&#39;][&#39;5. Exchange Rate&#39;])
+            converted_amount = round(rate * amount, 4)
+            return render_template_string(HTML_FORM, result=converted_amount, amount=amount,
+                                          from_currency=from_currency, to_currency=to_currency)
+        except Exception:
+            return render_template_string(HTML_FORM, error=&#34;Failed to get exchange rate. Please check the currencies or try later.&#34;)
+
+    return render_template_string(HTML_FORM)</pre>
